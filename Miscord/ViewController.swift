@@ -66,12 +66,6 @@ class ViewController: NSViewController {
     }
     
     @IBAction func openConfigLocationClicked(_ sender: Any) {
-        let alert = NSAlert.init()
-        alert.messageText = "Hello world"
-        alert.informativeText = getContaineredPath(path: "/Library/Application Support/Miscord/")
-        alert.addButton(withTitle: "OK")
-        alert.addButton(withTitle: "Cancel")
-        alert.runModal()
         NSWorkspace.shared.openFile(getContaineredPath(path: "/Library/Application Support/Miscord/"))
     }
 }
